@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Formulario - Stefane</title>
+</head>
+<body>
+    <div class="container">
+        <header>Folha Resumo Cadastro Único</header>
+
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Dados pessoais</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nome completo</label>
+                            <input type="text" placeholder="Seu nome completo" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Data de nascimento</label>
+                            <input type="date" placeholder="Sua data de nascimento" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Número de celular</label>
+                            <input type="text" name="celular" placeholder="Seu número de celular" maxlength="15" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gênero</label>
+                            <select id="genero" required>
+                                <option value="" disabled selected hidden>Selecione seu gênero</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Profissão</label>
+                            <input type="text" placeholder="Sua profissão" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="details ID">
+                    <span class="title">Identidade</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>RG</label>
+                            <input type="text" id="rg" maxlength="12" placeholder="Seu RG" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>CPF</label>
+                            <input type="text" id="cpf" maxlength="14" placeholder="Seu CPF" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Órgão Expedidor</label>
+                            <input type="text" placeholder="Órgão expedidor" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estado Emissor</label>
+                            <input type="text" placeholder="Estado emissor" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Data de emissão</label>
+                            <input type="date" placeholder="Data de emissão" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Número do nis</label>
+                            <input type="number" placeholder="Insira o número do nis" required>
+                        </div>
+                    </div>
+
+                    <button class="nextBtn">
+                        <span class="btnText">Próximo</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="form second">
+                <div class="details address">
+                    <span class="title">Endereço</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Localidade</label>
+                            <input type="text" placeholder="Insira sua localidade" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Tipo</label>
+                            <input type="text" placeholder="Ex: Rua, Apartamento ou etc..." required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Nome da rua ou ap" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Número</label>
+                            <input type="text" placeholder="Número da casa ou ap" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Referência para localização</label>
+                            <input type="text" placeholder="Insira uma referência" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>CEP</label>
+                            <input type="text" id="cep" name="cep" placeholder="CEP" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="details family">
+                    <span class="title">Detalhes Familiar</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Nome do pai</label>
+                            <input type="text" placeholder="Nome do pai" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Nome da mãe</label>
+                            <input type="text" placeholder="Nome da mãe" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Estado Civil</label>
+                            <input type="text" placeholder="Ex: Solteiro, Casado ou Viúvo" required>
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Voltar</span>
+                        </div>
+
+                        <button class="submit">
+                            <span class="submit">Confirmar</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="successMessage" class="success-message hidden">
+        <div class="message-box">
+            <h2>Cadastro realizado com sucesso!</h2>
+            <p>Obrigado por se registrar.</p>
+            <button onclick="closeMessage()">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
